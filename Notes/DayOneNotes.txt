@@ -1,0 +1,113 @@
+
+1. Session Interactive by Chat Window.
+
+2. Core Java/Advance Java
+
+3. Windows/Mac/Linux
+
+4. IntelliJ/Eclipse
+
+-------------------------------------------------------
+
+Data Types in Java:
+
+	- Primitive Data Types
+	- Reference Data Types
+	
+-------------------------------------------------------
+
+Object Oriented Programming:
+
+	Key Feature: Data Hidding
+	
+Features of OOPS:
+
+	- Encapuslating Data
+	- Abstracting the Data
+	- Code Resuability
+	- Defining Contracts or Base for application
+	- Reduces the complexity
+	
+Components of OOPS:
+
+	- Class
+	- Object
+	- Encapsulation
+	- Abstraction
+	- Inheritance
+	- Polymorphism
+	
+-------------------------------------------------------
+
+Class:
+
+	A user-defined data type or blueprint.
+	A collection of data members and member functions.
+	Data Members are the variable at class level.
+	Member Functions are the methods at class level.
+	Class helps you to define entity of your application.
+	
+Object:
+
+	An object is a variable of user-defined data type.
+	An object is a representator of a class.
+	Also, known as an instance or part of a class.
+	When we create an object of a class, memory gets allocated to its instance data members.
+	
+	int num;
+	Employee emp = new Employee();
+	Employee emp; 	// Reference Variable of Employee Type
+	new Employee(); // Creating Object
+	
+Constructor:
+
+	A special method that is used to initialize the data members of a class.
+	The name of the constructor is same as that of the class name.
+	They don't even have any return type.
+	Constructor is invoked implicitly by compiler.
+	
+Encapsulation:
+
+	A technique used to implment abstraction in Object Oriented Programming.
+	Encapsulation is used for access restriction to class members and methods.
+
+Abstraction:
+
+	A concept of accessing the internal details or describe the members from outside the class body.
+	
+	
+Access Modifiers:
+
+	Private:
+	
+		This is least accessible access modifier.
+		Private Members are accessible within its own class only.
+		
+	Public:
+
+		This is the most accessible access modifier.
+		Public Members can be accessible from anywhere.
+	
+	Default: 
+	
+		By Default, default is access modifier for every member.
+		Default Members can be accessible within the package or folder anywhere.
+		
+	Protected:
+	
+	
+---------------------------------------------------------------
+
+Inheritance:
+
+
+
+
+
+
+
+
+
+
+
+
