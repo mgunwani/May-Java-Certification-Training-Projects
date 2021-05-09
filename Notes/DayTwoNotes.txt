@@ -1,0 +1,97 @@
+
+Polymorphism:
+
+	`poly` means Many and `morpho` means Forms.
+	
+	"One Interface Multiple Functions"
+	
+	Static Polymorphism: achieved by Overloading
+	
+	Dynamic Polymorphism: achieved by Overridding
+	
+------------------------------------------
+
+Overloading:
+
+	A class can have more than one methods with same but different method signatures. There are three ways to differentiate method signatures:
+	
+	1. Number of parameters
+	
+		public int addition(int num1, int num2)
+		public int addition(int num1, int num2, int num3)
+	
+	2. Type of parameters
+		
+		public int addition(int num1, int num2)
+		public float addition(float num1, float num2)
+	
+	3. Sequence of parameters
+	
+		public float addition(int num1, float num2)
+		public float addition(float num1, int num2)
+
+	We overload methods and constructors in Java as per the requirement.
+	
+-------------------------------------------
+
+Overridding: 
+
+	- Helps to redefine of override the method from parent class. 
+	- This can only achieve with the help of inheritance.
+	
+	To implement or achieve the overriding concept, we use:
+	
+	- Abstract Classes and Abstract Methods
+	- Interfaces
+	
+--------------------------------------------
+
+Abstract Class and Abstract Method:
+
+	The purpose of abstract class is define the common definition of Base Class that is followed by derived classes as a contract.
+	
+	- An abstract class cannot be instantiated.
+	- An abstract class can contain abstract as well as non-abstract methods.
+	- An abstract method cannot have its implementation in abstract class.
+	- A child class cannot inherit more than abstract or non-abstract classes.
+	- Multiple Inheritance cannot be achieved using abstract classes.
+	- An abstract method can only be declared in abstract class.
+	- All Child/Derived classes must implment all the abstract methods in it.
+	
+------------------------------------------------
+
+Interface:
+
+	An interface is an contract that can have properties, variables and methods that have to be followed by Child or Derived Classes.
+	
+	- An interface needs to be implemented.
+	- It is not permitted to have access modifer on its method.
+	- All methods of an Interface are public and abstract.
+	- An interface only contains the declaration or signature of methods.
+	- Multiple Inheritance can be achieved using Interfaces
+	- An interace can also have default or static methods apart from abstract.
+
+------------------------------------------------
+
+Hint:
+
+	interface IBankAccount
+	{
+		bool Deposit(double amount);
+		bool Withdraw(double amount);
+		double Balance();
+	}
+	
+1. Saving Account has a limit to withdraw.
+2. Current has no limit.
+
+Note:
+
+	If Balance is less than the withdrawal amount then displays "Insuffient Balance"
+	If withdrawal amount is greater than 5000, then "Withdrawal attempts failed"
+
+--------------------------------------------------
+
+
+	
+	
