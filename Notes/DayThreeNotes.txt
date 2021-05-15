@@ -1,0 +1,100 @@
+
+Static Keyword
+Final Keyword
+Exception Handling
+Working with Streams
+Serialization and Deserialization
+Dynamic Web Project 
+Maven Project
+
+-------------------------------------------
+
+Static Keyword:
+
+	- Used for memory management.
+	- Helps in sharing the same variable or method by a given class.
+	- Static Members are associated with Class not an Object.
+	- Before creating the first object of class, memory gets allocated to static members.
+
+Static Keyword can be used with:
+
+	- Static Variables
+	- Static Methods
+	- Static Block
+	- Interface Static Methods(Java8 Onward) 
+	
+-----------------------------------------------------------------
+
+Final Keyword:
+
+	- In java, the final keyword can be used with variables, parameters, methods and classes.
+	- Using final keyword means can't be modified in the future.
+	
+1. Final Variable: 
+	The value of final variable can't be reassigned or changed later. 
+	It will be constant.
+
+2. Blank Final Variable: 
+	Blank Final Variable is not initialized at the time of declaration. So, it can be initialized in constructor.
+
+3. Static Blank Final Variable:
+	Static final variable which is not initialized at the time of declaration. So, it can be initialized using static block.
+	
+4. Final Method:
+	- You can not override final method in subclasses.
+	- You can call parent class final method using object of subclass.
+	
+5. Final Class:
+	- If you declare any class final, no other class can extend it.
+
+-----------------------------------------------------------------
+
+Exception Handling:
+
+	Types of Errors:
+
+	1. Compile Time Errors
+		- Syntactical Errors
+			a. When you ommit semicolon.
+			b. Misspelled any keywords.
+			c. Use keywords as identifiers. e.g. int final;
+			d. and so on.
+			
+		- Sementic/Expression Errors
+			a. When you write incorrect expressions.
+				e.g. c = a + b (Correct)
+					 a + b = c (Incorrect)
+					 
+	2. Logical Errors:
+		When we don't get an expected output but there is no error.
+		
+		int num = 100;
+		if(num/2 == 0)
+			System.out.println("Even");
+		else
+			System.out.println("Odd");
+	
+	3. Run-Time Errors: 
+	
+		- Run-Time Errors are also known as Exceptions.
+		- Exception is an abnormal termination of a program.
+		- Here, exceptions occurred at run time or execution time.
+		- Mostly, exceptions are occurred due to incorrect input, type checks, memory issues and so on.
+		
+	To handle runtime errors or exceptions, we use Exception Handling Mechanism:
+	
+	try:
+		To specify try block where we should place exception code.
+		We write a piece of code in try block, where chances of gettings exceptions are high.
+	
+	catch:
+		The catch block is used to handle the exception raised by try block.
+	
+
+
+
+
+
+
+
+
