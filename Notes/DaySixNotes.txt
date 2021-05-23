@@ -1,0 +1,123 @@
+
+1. MySQL Commands..
+2. Connectivity with JDBC 
+3. Servlet + JSP + + JDBC + MySQL 
+4. Filters and Listerners using Servlet
+
+--------------------------------------------------
+
+-- To get the list of databases:
+
+	SHOW DATABASES;
+	
+-- To create new database:
+
+	CREATE DATABASE sampledb;
+	
+-- To use your database:
+
+	USE sampledb;
+	
+-- To check the currently used database:
+
+	SELECT DATABASE();
+	
+-- 	To create new database table:
+
+	CREATE TABLE employees
+	(id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	salary FLOAT);
+	
+-- To check the structure of the table:
+
+	DESC employees
+	
+	DESCRIBE employees
+	
+-- To insert some sample data into `employees` table:
+
+	INSERT INTO employees(id, name, salary) VALUES(101, 'King', 12000);
+	INSERT INTO employees VALUES(102, 'Kochhar', 25000);
+	INSERT INTO employees VALUES(103, 'Sarah', 35000);
+	INSERT INTO employees VALUES(104, 'Roger', 35000);
+	INSERT INTO employees VALUES(105, 'Lee', 40000);
+	INSERT INTO employees VALUES(106, 'Joseph', 55000);
+	
+-- To fetch the `employees` data:
+
+	SELECT * FROM employees;
+	
+	SELECT * FROM employees
+	WHERE id = 105;
+	
+-- To delete all the data:
+
+	DELETE FROM employees;
+
+-- To delete specific records:
+
+	DELETE FROM employees
+	WHERE name = 'Lee';
+	
+-- To update all records:
+
+	UPDATE employees
+	SET salary = 50000;
+
+-- To update specific records:
+
+	UPDATE employees
+	SET salary = 35000
+	WHERE name IN ('Kochhar', 'Roger');
+	
+	UPDATE employees
+	SET salary = 25500
+	WHERE name IN ('King', 'Joseph');
+	
+-- To check the user and host name:
+
+	SELECT user();
+	
+-- To check the port on which mySQL services are running:
+
+	SHOW VARIABLES WHERE variable_name = 'port';
+	
+	Default Port: 3306
+	
+-- To clear command Line client screen:
+
+	system cls
+	
+----------------------------------------------------
+
+
+public void getAllEmployees() {
+		
+		List<Employee> employeeList = new ArrayList<Employee>();
+		
+		try {
+			/* 1. Register the Driver Class */
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			/* 2. Create Connection and Mention Connection String */
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sampledb?autoReconnect=true&SSL=false", "root", "password@123456");
+			/* 3. Create Statement */
+			Statement statement = connection.createStatement();
+			/* 4. Execute Query */
+			ResultSet rs = statement.executeQuery("SELECT * FROM employees;");
+			while(rs.next()) {
+				Employee employee = new Employee();
+				employee.setId(rs.getInt(1));
+				employee.setName(rs.getString(2));
+				employee.setSalary(rs.getFloat(3));
+				employeeList.add(employee);
+				/* System.out.println(rs.getInt(1) + ":" + rs.getString(2) + ":" + rs.getFloat("salary")); */
+				
+			}
+			/* 5. Close the Connection */
+			connection.close();
+		} catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+	}
