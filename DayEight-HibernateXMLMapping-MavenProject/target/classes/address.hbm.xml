@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+	<class name="com.bhawnagunwani.models.Address" table="address">
+	
+		<Id name="addressId">
+			<generator class="foreign">
+				<param name="property">employee</param>
+			</generator>
+		</Id>
+		
+		<property name="street"></property>
+		<property name="city"></property>
+		<property name="country"></property>
+	
+		<one-to-one name="employee"></one-to-one>
+	</class>
+
+</hibernate-mapping>
