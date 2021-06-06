@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- <bean id="p1" class="com.bhawnagunwani.models.Person">
+		<constructor-arg value="1001" type="int" />
+		<constructor-arg value="Shreya" type="String" />
+	</bean>
+	<bean id="a1" class="com.bhawnagunwani.models.Address">
+		<constructor-arg value="Civil Lines" type="String" />
+		<constructor-arg value="Delhi" type="String" />
+		<constructor-arg value="India" type="String" />
+	</bean>
+	<bean id="p2" class="com.bhawnagunwani.models.Person" parent="p1">
+		<constructor-arg ref="a1" type="com.bhawnagunwani.models.Address" />
+	</bean> -->
+	
+	<bean id="a1" class="com.bhawnagunwani.models.Address">
+		<constructor-arg value="Civil Lines" type="String" />
+		<constructor-arg value="Delhi" type="String" />
+		<constructor-arg value="India" type="String" />
+	</bean>
+	
+	<bean id="p1" class="com.bhawnagunwani.models.Person">
+		<constructor-arg value="1001" type="int" />
+		<constructor-arg value="Shreya" type="String" />
+		<constructor-arg ref="a1" type="com.bhawnagunwani.models.Address" />
+	</bean>
+	
+</beans>
